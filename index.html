@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jungbyungcheon.js"></script>
+    <title>JBC portfolio</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container _flex-between _al-center">
+            <h1 class="logo">
+                <a href="#home">logo</a>
+            </h1>
+            <div class="top-gnb">
+                <div class="pc-menu">
+                    <ul class="menu _flex-end _al-center">
+                        <li> <a href="#home">home</a></li>
+                        <li> <a href="#about">about</a></li>
+                        <li> <a href="#skills">skills</a></li>
+                        <li> <a href="#portfolio">portfolio</a></li>
+                        <li> <a href="#connect">connect</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="moblie-gnb-wrap">
+                <div class="icon-wrap _flex-center _al-center">
+                    <i class="menu-icon active">☰</i>
+                    <i class="close-icon">✖</i>
+                </div>
+                <div class="moblie-menu" style="display: none;">
+                    <ul class="menu">
+                        <li> <a href="#home">home</a></li>
+                        <li> <a href="#about">about</a></li>
+                        <li> <a href="#skills">skills</a></li>
+                        <li> <a href="#portfolio">portfolio</a></li>
+                        <li> <a href="#connect">connect</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="close-bg"></div>
+        </div>
+    </header>
+    <main id="main">
+       <section class="section _home" id="home">
+            <div class="width-600 _flex-center _column">
+                <div class="svg-wrap">
+                    <svg> 
+                        <text x="50%" y="50%">
+                            <tspan>//</tspan>
+                            <tspan>JBC</tspan>
+                            <tspan>{;}</tspan>
+                        </text> 
+                    </svg>   
+                </div>
+                <div class="_flex-center">
+                    <div class="text-typing">
+                        <h2>Web Publisher / JBC portfolio.</h2>
+                    </div>
+                </div>
+            </div>
+       </section> 
+       <section class="section _about" id="about">
+           <div class="container">
+                <h3 class="title _flex-center"><span>about</span></h3>
+                <div class="tab-wrap">
+                    <div class="list-wrap">
+                        <ul class="_flex-start">
+                            <li class="tab _profile _flex-start _al-center active"  data-tab="tab01">
+                                <i class="icon">&#10001;</i>
+                                <span>profile</span>
+                            </li>
+                            <li class="tab _ablility _flex-start _al-center" data-tab="tab02">
+                                <i class="icon">&#9885;</i>
+                                <span>strength</span>
+                            </li>
+                            <li class="tab _mbti _flex-start _al-center" data-tab="tab03">
+                                <i class="icon">&#8981;</i>
+                                <span>mbti</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-rel-wrap _flex-between _al-center">
+                        <p><span> C : / Users / JBC / </span><span class='tab-rel'>profile</span></p>
+                        <i class="icon">⋮</i>
+                    </div>
+                    <div class="tab-content-wrap">
+                        <div id="tab01" class="tab-content _profile active">
+                            <article>
+                                <div class="title-wrap _flex-between">
+                                    <div class="title">
+                                        <h4>프로필정보</h4>
+                                    </div>
+                                    <div class="bar-wrap _flex-end">
+                                        <span class="bar-orange"></span>
+                                        <span class="bar-purple"></span>
+                                        <span class="bar-skyblue"></span>
+                                    </div>
+                                </div>
+                                <div class="info _flex-start">
+                                    <div class="left-side">
+                                        <div class="img-wrap">
+                                            <img class="profile-img" src="img/profile.gif" alt="profile-img">
+                                        </div>
+                                        <div class="cont-wrap">
+                                            <h4 class="level">Lv.1 초급 웹개발자</h4>
+                                            <h4 class="nickname">JBC<span>@star1431</span></h4>
+                                            <div class="tags-wrap _flex-start _al-center">
+                                                <span>#신입</span>
+                                                <span>#코딩</span>
+                                                <span>#웹퍼블리셔</span>
+                                                <span>#남성</span>
+                                                <span>#ISFJ-T</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-side">
+                                        <div class="tab-text _tab-table _info"> 
+                                            <h5>info</h5>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>name</td>
+                                                        <td>정병천 <span>(JungByungCheon)</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>birthday</td>
+                                                        <td>1992.10.09</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>home</td>
+                                                        <td>서울특별시 노원구 중계동 거주</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                        <div class="tab-text _education">
+                                            <h5>education</h5>
+                                            <table>
+                                                <tr>
+                                                    <td>17.09 ~ 18.02</td>
+                                                    <td>더조은컴퓨터아카데미(노원)<br>모바일앱 & 웹 콘텐츠 개발과정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21.09 ~ 21.12</td>
+                                                    <td>서울청년 디지털소셜임팩트<br>웹프로그래밍 수료 / 기관 프로젝트 제작</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="tab-text _introduce">
+                                            <h5>introduction</h5>
+                                            <p>안녕하세요. 이제막 걸음마때기 시작한 Lv1 웹퍼블리셔 정병천입니다.</p>
+                                            <p>제 포트폴리오 사이트에 방문해주셔서 정말 감사합니다.</p>
+                                            <p>플러그인 사용하지 않고 하드코딩 위주로 작성된 웹사이트입니다^^..</p>
+                                            <p>부족한점이 많지만 꾸준히 노력하면서 성장하는 퍼블리셔가 되겠습니다!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="tab02" class="tab-content _strength">
+                            <article>
+                                <div class="title-wrap _flex-between">
+                                    <div class="title">
+                                        <h4>저의 "강점"은...</h4>
+                                    </div>
+                                    <div class="bar-wrap _flex-end">
+                                        <span class="bar-orange"></span>
+                                        <span class="bar-purple"></span>
+                                        <span class="bar-skyblue"></span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="img-wrap">
+                                        <img class="profile-img" src="img/strength.png" alt="캐릭터이미지">
+                                    </div>
+                                    <div class="tab-text _tab-table _strength">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>성장</td>
+                                                    <td>저는 새로운 것에 대해 두려워하기 보단 호기심을 가지는 편입니다.
+                                                        웹개발자는 종점이 없는 열차와도 같습니다. 끝없이 달려가는 열차에서
+                                                        저는 계속해서 바뀌는 풍경을 보고 미지에 대해 공포를 느끼는 것보다
+                                                        호기심으로 접근할 자세를 갖추고 있습니다. </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>분석</td>
+                                                    <td>오류에 대한 분석하는 능력을 가지고 있습니다.
+                                                        웹퍼블리셔로서 자주 겪는 오류 문제에 대해 코드 분석이 필수라고 생각합니다.
+                                                        문제 되는 코드를 해결하기 위해 다양한 측면에서 정보를 수집하며
+                                                        디버깅 작업을 수행해나갈 능력을 갖추고 있습니다.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>책임</td>
+                                                    <td>저는 업무에 대해 책임감을 가지고 일을 합니다.
+                                                        웹개발 프로젝트는 팀단위로 같이 하는 작업인 만큼 맡은 업무에 대한 책임을 가지고
+                                                        프로세스 진행 과정에서 차질이 없도록 피드백에 대해 거부감없이
+                                                        소통에 참여할 수 있습니다.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="tab03" class="tab-content _mbti">
+                            <article>
+                                <div class="title-wrap _flex-between">
+                                    <div class="title">
+                                        <h4>저의 "MBTI" 는..</h4>
+                                    </div>
+                                    <div class="bar-wrap _flex-end">
+                                        <span class="bar-orange"></span>
+                                        <span class="bar-purple"></span>
+                                        <span class="bar-skyblue"></span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h5>저의 성격유형은 <span>"ISFJ-T"</span> 입니다.</h5>
+                                    <div class="character">
+                                        <div class="caption _mind">
+                                            <p>마음</p>
+                                            <div class="bar _flex-between">
+                                                <span class="per _left">29%</span>
+                                                <div class="center-bar"><span class="bar _blue"></span></div>
+                                                <span class="per _right _blue">71%</span>
+                                            </div>
+                                            <div class="text-wrap _flex-between">
+                                                <span class="text _left">외향형</span>
+                                                <span class="text _right _blue">내향형</span>
+                                            </div>
+                                        </div>
+                                        <div class="caption _energy">
+                                            <p>에너지</p>
+                                            <div class="bar _flex-between">
+                                                <span class="per _left">45%</span>
+                                                <div class="center-bar"><span class="bar _orange"></span></div>
+                                                <span class="per _right _orange">55%</span>
+                                            </div>
+                                            <div class="text-wrap _flex-between">
+                                                <span class="text _left">직관형</span>
+                                                <span class="text _right _orange">현실주의형</span>
+                                            </div>
+                                        </div>
+                                        <div class="caption _self">
+                                            <p>본성</p>
+                                            <div class="bar _flex-between">
+                                                <span class="per _left">47%</span>
+                                                <div class="center-bar"><span class="bar _green"></span></div>
+                                                <span class="per _right _green">53%</span>
+                                            </div>
+                                            <div class="text-wrap _flex-between">
+                                                <span class="text _left">이성적사고형</span>
+                                                <span class="text _right _green">원칙주의형</span>
+                                            </div>
+                                        </div>
+                                        <div class="caption _tactics">
+                                            <p>전술</p>
+                                            <div class="bar _flex-between">
+                                                <span class="per _left _purple">54%</span>
+                                                <div class="center-bar"><span class="bar _purple"></span></div>
+                                                <span class="per _right">46%</span>
+                                            </div>
+                                            <div class="text-wrap _flex-between">
+                                                <span class="text _left _purple">계획형</span>
+                                                <span class="text _right">탐색형</span>
+                                            </div>
+                                        </div>
+                                        <div class="caption _identity">
+                                            <p>자아</p>
+                                            <div class="bar _flex-between">
+                                                <span class="per _left">43%</span>
+                                                <div class="center-bar"><span class="bar _red"></span></div>
+                                                <span class="per _right _red">57%</span>
+                                            </div>
+                                            <div class="text-wrap _flex-between">
+                                                <span class="text _left">자기주장형</span>
+                                                <span class="text _right _red">신중형</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </section> 
+       <section class="section _skills" id="skills">
+           <div class="container">
+                <h3 class="title _flex-center"><span>skills</span></h3>
+                <div class="skill-wrap _wrap01">
+                    <h4>Web publishing</h4>
+                    <div class="chart-wrap _flex-between">
+                        <div class="chart _item01">
+                            <div class="doughnut _html">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
+                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#DA4433" transform="rotate(-90 50 50)"/>
+                                </svg>
+                                <div class="per-wrap _flex-center _column _al-center">
+                                    <p class="language">HTML 5</p>
+                                    <p class="per" data-per="90">0%</p>
+                                </div>
+                            </div>
+                            <div class="text-wrap">
+                                <p>HTML 시멘틱구조를 따르며 목적에 맞는 태그활용 가능합니다.</p>
+                            </div>
+                        </div>
+                        <div class="chart _item01">
+                            <div class="doughnut _css">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
+                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#4380F5" transform="rotate(-90 50 50)"/>
+                                </svg>
+                                <div class="per-wrap _flex-center _column _al-center">
+                                    <p class="language">CSS 3</p>
+                                    <p class="per" data-per="80">0%</p>
+                                </div>
+                            </div>
+                            <div class="text-wrap">
+                                <p>가상선택자, 미디어쿼리, 기본적인 애니메이션 활용 가능합니다.</p>
+                            </div>
+                        </div>
+                        <div class="chart _item01">
+                            <div class="doughnut _js">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
+                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#F2B401" transform="rotate(-90 50 50)"/>
+                                </svg>
+                                <div class="per-wrap _flex-center _column _al-center">
+                                    <p class="language">JS</p>
+                                    <p class="per" data-per="60">0%</p>
+                                </div>
+                            </div>
+                            <div class="text-wrap">
+                                <p>JavaScript 문법을 이해하고 메서드 활용 가능합니다.</p>
+                            </div>
+                        </div>
+                        <div class="chart _item01">
+                            <div class="doughnut _jquery">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
+                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#FAA523" transform="rotate(-90 50 50)"/>
+                                </svg>
+                                <div class="per-wrap _flex-center _column _al-center">
+                                    <p class="language">JQurey</p>
+                                    <p class="per" data-per="70">0%</p>
+                                </div>
+                            </div>
+                            <div class="text-wrap">
+                                <p>JQuery 문법 및 코드 작성 가능하며 플러그인 활용 가능합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-wrap _wrap02">
+                    <h4>I can do</h4>
+                    <ul class="img-wrap _flex-center">
+                        <li><img src="img/vsc.png" alt=""></li>
+                        <li><img src="img/excel.png" alt=""></li>
+                        <li><img src="img/powerpoint.png" alt=""></li>
+                        <li><img src="img/word.png" alt=""></li>
+                    </ul>
+                </div>
+           </div>
+       </section> 
+       <section class="section _portfolio" id="portfolio">
+            <div class="container">
+                <h3 class="title _flex-center"><span>portfolio</span></h3>
+                <div class="portfolio-wrap">
+                    <ul class="item-wrap _flex-start">
+                        <li class="item _01">
+                            <img src="img/pf/gsicoop.jpg" alt="강서아이쿱">
+                            <div class="text-wrap ">
+                                <h5><span class="li-num">01.</span><span>GSICOOP 강서생협</span></h5>
+                                <p>강서생협 기관 팀프로젝트로 제작한 사이트입니다.</p>
+                                <p>imweb 솔루션 기반으로 만들었습니다.</p>
+                            </div>
+                            <div class="tags-wrap">
+                                <span>#PC</span>
+                                <span>#RWD</span>
+                                <span>#솔루션</span>
+                                <span>#운영중</span>
+                            </div>
+                            <div class="modal _flex-center _al-center">
+                                <button>상세보기</button>
+                            </div>
+                        </li>
+                        <li class="item _02">
+                            <img src="img/pf/kid.jpg" alt="키즈가오">
+                            <div class="text-wrap ">
+                                <h5><span class="li-num">02.</span><span>kidgao (포폴용)</span></h5>
+                                <p>디지털소셜임팩트 과정에서 만든 사이트입니다.</p>
+                                <p>html5, css3</p>
+                            </div>
+                            <div class="tags-wrap">
+                                <span>#PC</span>
+                                <span>#RWD</span>
+                                <span>#onepage</span>
+                            </div>
+                            <div class="modal _flex-center _al-center">
+                                <button>상세보기</button>
+                            </div>
+                        </li>
+                        <li class="item _03">
+                            <img src="img/pf/jbcplu.jpg" alt="jbc플러그인">
+                            <div class="text-wrap ">
+                                <h5><span class="li-num">02.</span><span>JBC plugin</span></h5>
+                                <p>학원수료 후 독학으로 만들었습니다.</p>
+                                <p>html5, css3, JQuery</p>
+                            </div>
+                            <div class="tags-wrap">
+                                <span>#PC</span>
+                                <span>#Plugin</span>
+                            </div>
+                            <div class="modal _flex-center _al-center">
+                                <button>상세보기</button>
+                            </div>
+                        </li>
+                        <li class="item _04">
+                            <img src="img/pf/port1.jpg" alt="포트폴리오">
+                            <div class="text-wrap ">
+                                <h5><span class="li-num">02.</span><span>JBC portfolio</span></h5>
+                                <p>첫 포폴소개 원페이지형 사이트입니다.</p>
+                                <p>html5, css3, JQuery, plugin</p>
+                            </div>
+                            <div class="tags-wrap">
+                                <span>#PC</span>
+                                <span>#RWD</span>
+                                <span>#onepage</span>
+                            </div>
+                            <div class="modal _flex-center _al-center">
+                                <button>상세보기</button>
+                            </div>
+                        </li>
+                        <li class="item _05">
+                            <img src="img/pf/nexon.jpg" alt="넥슨리뉴얼">
+                            <div class="text-wrap ">
+                                <h5><span class="li-num">02.</span><span>nexon (포폴용)</span></h5>
+                                <p>멀티페이지형 넥슨 리뉴얼 사이트입니다.</p>
+                                <p>html5, css3, JQuery, plugin</p>
+                            </div>
+                            <div class="tags-wrap">
+                                <span>#PC</span>
+                                <span>#RWD</span>
+                                <span>#renewal</span>
+                                <span>#mutipage</span>
+                            </div>
+                            <div class="modal _flex-center _al-center">
+                                <button>상세보기</button>
+                            </div>
+                        </li>
+                        <li class="item _06">
+                            <img src="img/pf/uhbee.jpg" alt="어비팩토리">
+                            <div class="text-wrap ">
+                                <h5><span class="li-num">02.</span><span>UHBEE 팩토리 (포폴용)</span></h5>
+                                <p>연습용 원페이지형 첫제작 사이트입니다.</p>
+                                <p>html5, css3</p>
+                            </div>
+                            <div class="tags-wrap">
+                                <span>#PC</span>
+                                <span>#RWD</span>
+                                <span>#onepage</span>
+                            </div>
+                            <div class="modal _flex-center _al-center">
+                                <button>상세보기</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-popup-wrap">
+                    <ul class="item-modal-wrap">
+                        <li class="item _01">
+                            <div class="review-wrap">
+                                <div class="tab-wrap">
+                                    <div class="list-wrap _flex-between _al-center">
+                                        <span class="tab">GSICOOP</span>
+                                        <button class="close">✖</button>
+                                    </div>
+                                    <div class="tab-rel-wrap _flex-between _al-center">
+                                        <p><span> D : / Portfolio / JBC / </span><span class='tab-rel'>GSICOOP</span></p>
+                                        <i class="icon">⋮</i>
+                                    </div>
+                                <article>
+
+                                </article>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+       </section> 
+       <section class="section _connect" id="connect">
+            <div class="container">
+                <h3 class="title _flex-center"><span>connect</span></h3>
+                <div class="text-wrap"></div>
+            </div>
+
+       </section>  
+    </main>
+    <footer id="footer" class="abc _flex-center _column">
+        <p>이 페이지는 상업용 목적이 아닌 개인 포트폴리용으로 제작되었습니다.</p>    
+        <p>Copyright © 2021 JBC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
