@@ -11,7 +11,7 @@ $(function(){
     }
 
     // header - 메뉴 a태그 클릭시 메뉴효과 및 이동
-    var menuLink = $('.menu li a'); //pc
+    var menuLink = $('.menu li a');
     menuLink.click(function(e){
         e.preventDefault();
         //클릭시 섹션이동 중 섹션영역에따른 메뉴효과 제거
@@ -59,7 +59,7 @@ $(function(){
         });
         
         //bg 클릭시
-        var closeBg = $('.close-bg');
+        var closeBg = $('#header .close-bg');
         closeBg.click(function(){
             $('.moblie-gnb-wrap').animate({width:'0'},200);
             $('.moblie-menu').hide();
@@ -71,7 +71,7 @@ $(function(){
     moblieMenu();
 
 
-    // scrollEvent - 각센션 영역에 대한 메뉴효과 함수
+    // scrollEvent - 각센션 영역에 대한 메뉴효과 
     var onOff = function(){
         $('section').each(function(){
             var idFind = $(this).attr('id');
@@ -118,7 +118,7 @@ $(function(){
                 barWidth.eq(tabIndex-2).delay(200).animate({width:'80%'},600).stop();
                 barWidth.eq(tabIndex-1).delay(200).animate({width:'60%'},600).stop();
             }
-        });
+        })
         // #tab03 mbti 각 bar 크기 함수  
         if($('#tab03').hasClass("active") === true) {
             $('.caption .bar').each(function(){
@@ -164,20 +164,46 @@ $(function(){
                             //숫자증가끝나고 이중if문 false로 이벤트중단
                             f = false;
                         }        
-                    });  
-                });
+                    })
+                })
             } 
         }
     }
 
     //포폴 숫자변경
-    var portfolio = $('.portfolio-wrap .item-wrap li');
-    portfolio.each(function(eq){
-        var listNum = eq + 1 + '.'
-        $(this).find('.li-num').text('0'+listNum);
-    })
+    var portfolio = function(){
+        var itemEl = $('.js-portfolio .item-wrap li');
+        var listEl = $('.portfolio-wrap .item-wrap li');
+        var modalEl =$('.modal-popup-wrap .item-modal-wrap li');
+        itemEl.each(function(eq){
+            var listNum = eq + 1 + '.'
+            $(this).find('.li-num').text('0'+listNum);
+        })
+        listEl.each(function(eq2){
+            $(this).find('button').click(function(){
+                $('body').addClass('hidden');   
+                $('.modal-popup-wrap').show().addClass('show');
+                modalEl.eq(eq2).addClass('active');
+                var monitor =$('.modal-popup-wrap .item.active').find('.monitor');
+                var monitorH = monitor.width()*(7/16);
+                $('.monitor').height(monitorH);
+            })
+        })
+        $('.modal-popup-wrap .close-bg, .list-wrap .close').click(function(){
+            $('body').removeClass('hidden');
+            $('.modal-popup-wrap').hide().removeClass('show');
+            modalEl.removeClass('active');
+        })
+
+    }
+    portfolio();
 
     // window load && scroll 시
+    $(window).resize(function(){
+        var monitor =$('.modal-popup-wrap .item.active').find('.monitor');
+        var monitorH = monitor.width()*(7/16);
+        $('.monitor').height(monitorH);
+    })
     $(window).on('load scroll',function(){
         headerFixed();
         chartAni();
