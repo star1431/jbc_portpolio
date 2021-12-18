@@ -75,13 +75,13 @@ $(function(){
             var idFind = $(this).attr('id');
             var sectionTop = $(this).offset().top;
             var scrollTop = $(window).scrollTop()+$(window).height();
-            console.log('씨발='+sectionTop,'왜='+scrollTop)
             //메뉴 효과
             if(($(this).offset().top - $(window).scrollTop()) < 70){
                 var menuEl =  menuLink.parent('li').find('a[href="#' + idFind + '"]');
                 menuEl.parent('li').siblings().removeClass('active');
                 menuEl.parent('li').addClass('active');
             }
+            // 페이드 한번
             if((sectionTop+300) <= scrollTop){
                 $(this).addClass('show')
             } 
