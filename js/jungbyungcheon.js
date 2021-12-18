@@ -34,9 +34,8 @@ $(function(){
             if(486 >= windowWidth){
                 var moblie = $('.moblie-gnb-wrap');
                 closeBg.hide();
-                moblie.find('.close-icon').hide();
+                moblie.find('.close-icon , .moblie-menu').hide();
                 moblie.find('.menu-icon').show();
-                moblie.find('.moblie-menu').hide();
                 $('.moblie-gnb-wrap').animate({width:'0'},200);
             }
         });
@@ -62,8 +61,7 @@ $(function(){
         var closeBg = $('#header .close-bg');
         closeBg.click(function(){
             $('.moblie-gnb-wrap').animate({width:'0'},200);
-            $('.moblie-menu').hide();
-            $('i.close-icon').hide();
+            $('.moblie-menu , i.close-icon').hide();
             $(this).hide();
             $('i.menu-icon').show();
         })
@@ -75,13 +73,18 @@ $(function(){
     var onOff = function(){
         $('section').each(function(){
             var idFind = $(this).attr('id');
+            var sectionTop = $(this).offset().top;
+            var scrollTop = $(window).scrollTop()+$(window).height();
+            console.log('씨발='+sectionTop,'왜='+scrollTop)
+            //메뉴 효과
             if(($(this).offset().top - $(window).scrollTop()) < 70){
-
                 var menuEl =  menuLink.parent('li').find('a[href="#' + idFind + '"]');
-
                 menuEl.parent('li').siblings().removeClass('active');
                 menuEl.parent('li').addClass('active');
             }
+            if((sectionTop+300) <= scrollTop){
+                $(this).addClass('show')
+            } 
         });
     }
     onOff();
@@ -170,15 +173,17 @@ $(function(){
         }
     }
 
-    //포폴 숫자변경
+    //포폴
     var portfolio = function(){
         var itemEl = $('.js-portfolio .item-wrap li');
         var listEl = $('.portfolio-wrap .item-wrap li');
         var modalEl =$('.modal-popup-wrap .item-modal-wrap li');
+        //리스트숫자
         itemEl.each(function(eq){
             var listNum = eq + 1 + '.'
             $(this).find('.li-num').text('0'+listNum);
         })
+        //모달팝업
         listEl.each(function(eq2){
             $(this).find('button').click(function(){
                 $('body').addClass('hidden');   
@@ -187,8 +192,15 @@ $(function(){
                 var monitor =$('.modal-popup-wrap .item.active').find('.monitor');
                 var monitorH = monitor.width()*(7/16);
                 $('.monitor').height(monitorH);
+                //close bg 높이수정
+                var itemH =$('.item-modal-wrap').height()
+                var modalH =$('.modal-popup-wrap').height()
+                if(modalH <= itemH){
+                    $('.modal-popup-wrap').find('.close-bg').height(itemH+100);
+                };
             })
         })
+        //close
         $('.modal-popup-wrap .close-bg, .list-wrap .close').click(function(){
             $('body').removeClass('hidden');
             $('.modal-popup-wrap').hide().removeClass('show');
