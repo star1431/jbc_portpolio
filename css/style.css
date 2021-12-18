@@ -153,7 +153,7 @@ section._about .tab-wrap .list-wrap .tab::after{
 section._about .tab-wrap .list-wrap .tab:last-child::after{content:none;}
 section._about .tab-wrap .list-wrap .tab span{color: #fff;}
 section._about .tab-wrap .list-wrap .tab.active{background-color:#4E5357 ;}
-section._about .tab-wrap .list-wrap .tab i.icon{display: inline-block;width:25px;height: 25px;margin-right: 10px;background-color: #fff;border-radius: 50%; font-size: 18px; font-weight: 700;color: #fff;text-align: center;line-height: 20px;}
+section._about .tab-wrap .list-wrap .tab i.icon{display: inline-block;width:25px;height: 25px;margin-right: 10px;border-radius: 50%; font-size: 18px; font-weight: 700;color: #fff;text-align: center;line-height: 20px;}
 section._about .tab-wrap .list-wrap .tab._profile i.icon{background-color: #FC5230;line-height: 22px;transform: rotate(45deg);}
 section._about .tab-wrap .list-wrap .tab._ablility i.icon{background-color: #9A30AE;}
 section._about .tab-wrap .list-wrap .tab._mbti i.icon{background-color: #49B9FF;font-size: 20px;}
@@ -279,7 +279,7 @@ section._skills .skill-wrap._wrap02 .img-wrap li img{width:100%;height: auto;}
 .section._portfolio .item-wrap .item .modal button{position: relative;padding:5px 10px;background-color: transparent;border-radius: 5px;border:1px solid #fff;font-size: 2rem;color: #fff;transform: translateY(-100%);cursor: pointer;transition: background-color  0.3s linear,border-color  0.3s linear,transform 0.5s linear;}
 .section._portfolio .item-wrap .item:hover .modal{opacity:1;}
 .section._portfolio .item-wrap .item:hover .modal button{transform: translateY(0%);}
-.section._portfolio .item-wrap .item .modal button:hover{background-color: #FC5230;border-color: #FC5230;}
+.section._portfolio .item-wrap .item .modal button:hover{background-color: #FC5230;border: 1px solid #FC5230;}
 .section._portfolio .item-wrap .item:hover{border-color: #6b6b6b;box-shadow: 1px 1px 5px #252525;}
 
 /*section-portfolio-modal*/
