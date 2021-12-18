@@ -188,6 +188,7 @@ $(function(){
             $(this).find('button').click(function(){
                 $('body').addClass('hidden');   
                 $('.modal-popup-wrap').show().addClass('show');
+                $('.modal-popup-wrap').find('.close-bg').show();
                 modalEl.eq(eq2).addClass('active');
                 var monitor =$('.modal-popup-wrap .item.active').find('.monitor');
                 var monitorH = monitor.width()*(7/16);
@@ -197,7 +198,7 @@ $(function(){
                 var modalH =$('.modal-popup-wrap').height()
                 if(modalH <= itemH){
                     $('.modal-popup-wrap').find('.close-bg').height(itemH+100);
-                };
+                } 
             })
         })
         //close
