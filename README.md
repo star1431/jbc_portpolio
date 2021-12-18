@@ -10,8 +10,8 @@ JBC_PORTPOLIO -2021
 
 > **메뉴 기능**
 
-> - home 메인 / svg글자 이용 그리기효과
-> - about 자기소개 / tab기능과 탭전환시 bar ani 
+> - home 메인 / svg text 이용 그리기효과
+> - about 자기소개 / tab 기능과 탭전환시 bar ani 
 > - skills 원형차트 svg circle 이용하여 원형차트 및 텍스트 % 숫자 증가
 > - portpolio 모달팝업으로 상세보기 띄우기
 > - connect 큰 기능 없습니다.
