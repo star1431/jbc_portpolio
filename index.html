@@ -4,805 +4,1405 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--js-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://star1431.github.io/jbc_portpolio/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <script src="js/jungbyungcheon.js"></script>
-    <title>JBC portfolio</title>
+    <script src="js/jbc_custom.js"></script>
+    <!--icon cdn-->
+    <script src="https://kit.fontawesome.com/e4206d5b6d.js" crossorigin="anonymous"></script>
+    <!--sweet alert plugin-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--owl plugin-->
+    <link rel="stylesheet" href="js/jquery/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/jquery/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="js/jquery/OwlCarousel2-2.3.4/docs/assets/css/animate.css">
+    <script src="js/jquery/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src=""></script>
+    <!--css-->
+    <link rel="stylesheet" href="css/jbcstyle.css">
+    <title>배틀넷 연습사이트</title>
 </head>
 <body>
-    <header id="header">
-        <div class="container _flex-between _al-center">
-            <h1 class="logo">
-                <a href="#home">logo</a>
-            </h1>
-            <div class="top-gnb">
-                <div class="pc-menu">
-                    <ul class="menu _flex-end _al-center">
-                        <li> <a href="#home">home</a></li>
-                        <li> <a href="#about">about</a></li>
-                        <li> <a href="#skills">skills</a></li>
-                        <li> <a href="#portfolio">portfolio</a></li>
-                        <li> <a href="#connect">connect</a></li>
+    <header class="header">
+        <div class="w1600">
+            <div class="nav-bar _flex-between _al-center">
+                <h1 class="logo ">
+                    <a href="#" class="_flex-center"><img src="img/battle-log.png" alt="logo"></a>
+                </h1>
+                <div class="nav-item">
+                    <ul class="_flex-start">
+                        <li class="download">
+                            <a href="javascript:;">
+                                <img src="img/download.svg" alt="download">
+                                <span>Battle.net 앱 다운로드</span>
+                            </a>
+                        </li>
+                        <li class="support">
+                            <a href="javascript:;">고객지원</a>
+                        </li>
+                        <li class="user">
+                            <a href="javascript:;">내 계정 <span>&gt;</span></a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-            <div class="moblie-gnb-wrap">
-                <div class="icon-wrap _flex-center _al-center">
-                    <i class="menu-icon active">&#9776;</i>
-                    <i class="close-icon">&#10006;</i>
-                </div>
-                <div class="moblie-menu">
-                    <ul class="menu">
-                        <li> <a href="#home">home</a></li>
-                        <li> <a href="#about">about</a></li>
-                        <li> <a href="#skills">skills</a></li>
-                        <li> <a href="#portfolio">portfolio</a></li>
-                        <li> <a href="#connect">connect</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="close-bg"></div>
-        </div>
-    </header>
-    <main id="main">
-       <section class="section _home" id="home">
-            <div class="width-600 _flex-center _column">
-                <div class="svg-wrap">
-                    <svg> 
-                        <text x="50%" y="50%">
-                            <tspan>//</tspan>
-                            <tspan>JBC</tspan>
-                            <tspan>{;}</tspan>
-                        </text> 
-                    </svg>   
-                </div>
-                <div class="_flex-center">
-                    <div class="text-typing">
-                        <h2>Web Publisher / JBC portfolio.</h2>
+                <div class="nav-item-modal _border _none">
+                    <div class="tick">
+                        <span class="fake-background"></span>
+                    </div>
+                    <div class="login-div _border-bottom">
+                        <a href="javascript:;">로그인</a>
+                    </div>
+                    <div class="user-account">
+                        <a href="javascript:;" class="modal-account-a _flex-start _al-center">
+                            <i class="icon fa-solid fa-gear"></i>
+                            <span>계정관리</span>
+                        </a>
+                        <a href="javascript:;" class="modal-account-a _flex-start _al-center">
+                            <i class="icon fa-solid fa-user-plus"></i>
+                            <span>무료회원가입</span>
+                        </a>
                     </div>
                 </div>
             </div>
-       </section> 
-       <section class="section _about" id="about">
-           <div class="container">
-                <h3 class="title _flex-center"><span>about</span></h3>
-                <div class="tab-wrap">
-                    <div class="list-wrap">
-                        <ul class="_flex-start">
-                            <li class="tab _profile _flex-start _al-center active"  data-tab="tab01">
-                                <i class="icon">&#10001;</i>
-                                <span>profile</span>
+            <div class="menu-container">
+                <div class="game-menu drop-menu _radius-4">
+                    <button id="game-select" class="menu-button _flex-center _al-center _radius-4" type="button">
+                        <span>게임 선택</span>
+                        <i class="icon fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="menu-list _radius-4 _flex-start _none">
+                        <div class="game menu-box">
+                            <h4>게임</h4>
+                            <div class="menu-lists _flex-start">
+                                <ul class="menu-1 game-menu-ul">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/wow.svg" alt="">
+                                            <span>월드 오브 워크래프트</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/wow_c.svg" alt="">
+                                            <span>월드 오브 워크래프트 클래식</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/warzone.svg" alt="">
+                                            <span>콜 오브 듀티®: 워존</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/VanguardGold.svg" alt="">
+                                            <span>콜 오브 듀티®: 뱅가드</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/blackops.svg" alt="">
+                                            <span>콜 오브 듀티®: 블랙 옵스 콜드 워</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/cod_mw.svg" alt="">
+                                            <span>콜 오브 듀티: 모던 워페어</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/cod_mw2.svg" alt="">
+                                            <span>콜 오브 듀티®: 모던 워페어 2 캠페인 리마스터</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/blackops.svg" alt="">
+                                            <span>콜 오브 듀티®: 블랙 옵스 4</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/hearthstone.svg" alt="">
+                                            <span>하스스톤</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="menu-2 game-menu-ul">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/overwatch.svg" alt="">
+                                            <span>오버워치</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/diablo-ii.svg" alt="">
+                                            <span>디아블로 II: 레저렉션</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/diablo-iii.svg" alt="">
+                                            <span>디아블로 III</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/starcraft-remastered.svg" alt="">
+                                            <span>스타크래프트 II</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/starcraft-ii.svg" alt="">
+                                            <span>스타크래프트</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/warcraft-iii.svg" alt="">
+                                            <span>워크래프트 III</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/heroes-of-the-storm.svg" alt="">
+                                            <span>히어로즈 오브 더 스톰</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <img src="img/gameicon/blizzard-arcade.svg" alt="">
+                                            <span>블리자드 아케이드</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="service menu-box">
+                            <h4>추가 서비스</h4>
+                            <div class="menu-lists">
+                                <ul class="menu-3 service-menu-ul">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon fa-solid fa-user-tag"></i>
+                                            <span>BattleTag 변경</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon fa-solid fa-circle-plus"></i>
+                                            <span>코드 등록</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon fa-solid fa-cart-shopping"></i>
+                                            <span>블리자드 기어 스토어</span>
+                                            <i class="icon fa-solid fa-up-right-from-square"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search _radius-4 _flex-start _al-center">
+                    <i class="icon fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="searchword" id="search" placeholder="검색">
+                </div>
+                <div class="wish _radius-4 _flex-center _al-center">
+                    <i class="icon fa-solid fa-heart"></i>
+                </div>
+                <div class="coin-menu drop-menu _radius-4">
+                    <button id="coin-select" class="menu-button _flex-center _al-center" type="button">
+                        <span>배틀코인</span>
+                        <i class="icon fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="menu-list _radius-4 _flex-start _none">
+                        <div class="coin menu-box">
+                            <div class="menu-lists">
+                                <ul class="menu-3 service-menu-ul">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon fa-solid fa-circle-plus"></i>
+                                            <span>배틀코인 충전</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon fa-solid fa-credit-card"></i>
+                                            <span>게임 코드 등록</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon fa-solid fa-clock-rotate-left"></i>
+                                            <span>배틀코인 충전/사용 내역</span>
+                                            <i class="icon fa-solid fa-up-right-from-square"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="icon fa-solid fa-circle-question"></i>
+                                            <span>배틀코인 도움말</span>
+                                            <i class="icon fa-solid fa-up-right-from-square"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="banner-section">
+            <div class="w1600">
+                <div class="banner-box owl-carousel owl-theme">
+                    <div class="item item01">
+                        <div class="banner-text _flex-start _al-center">
+                            <div>
+                                <img src="img/banner/diablo.webp" alt="">
+                                <h4>악이 되살아났다</h4>
+                                <a class="buy-link _radius-4 _buy-hover" href="javascript:;">구매하기</a>
+                            </div>
+                        </div>
+                        <div class="banner-bg">
+                            <div class="bg-gradient"></div>
+                            <div class="bg-img"></div>
+                        </div>
+                    </div>
+                    <div class="item item02">
+                        <div class="banner-text _flex-start _al-center">
+                            <div>
+                                <img src="img/banner/warzone.webp" alt="">
+                                <h4>시즌2 라이브</h4>
+                                <a class="buy-link _radius-4 _buy-hover" href="javascript:;">무료로 플레이하기</a>
+                            </div>
+                        </div>
+                        <div class="banner-bg">
+                            <div class="bg-gradient"></div>
+                            <div class="bg-img"></div>
+                        </div>
+                    </div>
+                    <div class="item item03">
+                        <div class="banner-text _flex-start _al-center">
+                            <div>
+                                <img src="img/banner/stone.webp" alt="">
+                                <h4>하스스톤 최신 확장팩으로 뛰어드세요</h4>
+                                <a class="buy-link _radius-4 _buy-hover" href="javascript:;">예약 구매</a>
+                            </div>
+                        </div>
+                        <div class="banner-bg">
+                            <div class="bg-gradient"></div>
+                            <div class="bg-img"></div>
+                        </div>
+                    </div>
+                    <div class="item item04">
+                        <div class="banner-text _flex-start _al-center">
+                            <div>
+                                <img src="img/banner/callof.webp" alt="">
+                                <h4> 기간 한정으로 멀티플레이어 무료 액세스가 제공됩니다. 지금 무료로 플레이하십시오!</h4>
+                                <a class="buy-link _radius-4 _buy-hover" href="javascript:;">무료로 플레이하기</a>
+                            </div>
+                        </div>
+                        <div class="banner-bg">
+                            <div class="bg-gradient"></div>
+                            <div class="bg-img"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-autoplay">
+                    <button class="play" type="button">
+                        <i class="icon fa-solid fa-play"></i>
+                    </button>
+                    <button class="stop" type="button">
+                        <i class="icon fa-solid fa-pause"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="gamebar-section">
+            <div class="w1600">
+                <div class="game-failmy-box _radius-4 _flex-center _al-center">
+                    <div class="failmy-list _flex-start _al-center">
+                        <h4>게임</h4>
+                        <ul class="game-list _flex-start">
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/wow.svg" alt="">
+                                </a>
                             </li>
-                            <li class="tab _ablility _flex-start _al-center" data-tab="tab02">
-                                <i class="icon">&#9885;</i>
-                                <span>strength</span>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/wow_c.svg" alt="">
+                                </a>
                             </li>
-                            <li class="tab _mbti _flex-start _al-center" data-tab="tab03">
-                                <i class="icon">&#8981;</i>
-                                <span>mbti</span>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/warzone.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/VanguardGold.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/blackops.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/cod_mw.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/cod_mw2.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/blackops.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/hearthstone.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/overwatch.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/diablo-ii.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/diablo-iii.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/starcraft-remastered.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/starcraft-ii.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/warcraft-iii.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/heroes-of-the-storm.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javarscript:;">
+                                    <img src="img/gameicon/blizzard-arcade.svg" alt="">
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-rel-wrap _flex-between _al-center">
-                        <p><span> C : / Users / JBC / </span><span class='tab-rel'>profile</span></p>
-                        <i class="icon">⋮</i>
-                    </div>
-                    <div class="tab-content-wrap">
-                        <div id="tab01" class="tab-content _profile active">
-                            <article>
-                                <div class="title-wrap _flex-between">
-                                    <div class="title">
-                                        <h4>프로필정보</h4>
-                                    </div>
-                                    <div class="bar-wrap _flex-end">
-                                        <span class="bar-orange"></span>
-                                        <span class="bar-purple"></span>
-                                        <span class="bar-skyblue"></span>
-                                    </div>
-                                </div>
-                                <div class="info _flex-start">
-                                    <div class="left-side">
-                                        <div class="img-wrap">
-                                            <img class="profile-img" src="img/profile.gif" alt="profile-img">
-                                        </div>
-                                        <div class="cont-wrap">
-                                            <h4 class="level">Lv.1 초급 웹개발자</h4>
-                                            <h4 class="nickname">JBC<span>@star1431</span></h4>
-                                            <div class="tags-wrap _flex-start _al-center">
-                                                <span>#신입</span>
-                                                <span>#코딩</span>
-                                                <span>#웹퍼블리셔</span>
-                                                <span>#남성</span>
-                                                <span>#ISFJ-T</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right-side">
-                                        <div class="tab-text _tab-table _info"> 
-                                            <h5>info</h5>
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>name</td>
-                                                        <td>정병천 <span>(JungByungCheon)</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>birthday</td>
-                                                        <td>1992.10.09</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>home</td>
-                                                        <td>서울특별시 노원구 중계동 거주</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <div class="tab-text _education">
-                                            <h5>education</h5>
-                                            <table>
-                                                <tr>
-                                                    <td>17.09 ~ 18.02</td>
-                                                    <td>더조은컴퓨터아카데미(노원)<br>모바일앱 & 웹 콘텐츠 개발과정</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>21.09 ~ 21.12</td>
-                                                    <td>서울청년 디지털소셜임팩트<br>웹프로그래밍 수료 / 기관 프로젝트 제작</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="tab-text _introduce">
-                                            <h5>introduction</h5>
-                                            <p>안녕하세요. 이제막 걸음마 떼기 시작한 Lv1 웹퍼블리셔 정병천입니다.</p>
-                                            <p>제 포트폴리오 사이트에 방문해주셔서 정말 감사합니다.</p>
-                                            <p>플러그인 사용하지 않고 하드코딩 위주로 작성된 웹사이트입니다^^..</p>
-                                            <p>부족한점이 많지만 꾸준히 노력하면서 성장하는 퍼블리셔가 되겠습니다!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div id="tab02" class="tab-content _strength">
-                            <article>
-                                <div class="title-wrap _flex-between">
-                                    <div class="title">
-                                        <h4>저의 "강점"은...</h4>
-                                    </div>
-                                    <div class="bar-wrap _flex-end">
-                                        <span class="bar-orange"></span>
-                                        <span class="bar-purple"></span>
-                                        <span class="bar-skyblue"></span>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <div class="img-wrap">
-                                        <img class="profile-img" src="img/strength.png" alt="캐릭터이미지">
-                                    </div>
-                                    <div class="tab-text _tab-table _strength">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td><i class="icon _book"></i> 성장</td>
-                                                    <td>저는 새로운 것에 대해 두려워하기 보단 호기심을 가지는 편입니다.
-                                                        웹개발자는 종점이 없는 열차와도 같습니다. 끝없이 달려가는 열차에서
-                                                        저는 계속해서 바뀌는 풍경을 보고 미지에 대해 공포를 느끼는 것보다
-                                                        호기심으로 접근할 자세를 갖추고 있습니다. </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="icon _dom"></i>분석</td>
-                                                    <td>오류에 대한 분석하는 능력을 가지고 있습니다.
-                                                        웹퍼블리셔로서 자주 겪는 오류 문제에 대해 코드 분석이 필수라고 생각합니다.
-                                                        문제 되는 코드를 해결하기 위해 다양한 측면에서 정보를 수집하며
-                                                        디버깅 작업을 수행해나갈 능력을 갖추고 있습니다.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class="icon _timer"></i>책임</td>
-                                                    <td>저는 업무에 대해 책임감을 가지고 일을 합니다.
-                                                        웹개발 프로젝트는 팀단위로 같이 하는 작업인 만큼 맡은 업무에 대한 책임을 가지고
-                                                        프로세스 진행 과정에서 차질이 없도록 피드백에 대해 거부감없이
-                                                        소통에 참여할 수 있습니다.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div id="tab03" class="tab-content _mbti">
-                            <article>
-                                <div class="title-wrap _flex-between">
-                                    <div class="title">
-                                        <h4>저의 "MBTI" 는..</h4>
-                                    </div>
-                                    <div class="bar-wrap _flex-end">
-                                        <span class="bar-orange"></span>
-                                        <span class="bar-purple"></span>
-                                        <span class="bar-skyblue"></span>
-                                    </div>
-                                </div>
-                                <div class="info">
-                                    <h5>저의 성격유형은 <span>"ISFJ-T"</span> 입니다.</h5>
-                                    <div class="character">
-                                        <div class="caption _mind">
-                                            <p>마음</p>
-                                            <div class="bar _flex-between">
-                                                <span class="per _left">29%</span>
-                                                <div class="center-bar"><span class="bar _blue"></span></div>
-                                                <span class="per _right _blue">71%</span>
-                                            </div>
-                                            <div class="text-wrap _flex-between">
-                                                <span class="text _left">외향형</span>
-                                                <span class="text _right _blue">내향형</span>
-                                            </div>
-                                        </div>
-                                        <div class="caption _energy">
-                                            <p>에너지</p>
-                                            <div class="bar _flex-between">
-                                                <span class="per _left">45%</span>
-                                                <div class="center-bar"><span class="bar _orange"></span></div>
-                                                <span class="per _right _orange">55%</span>
-                                            </div>
-                                            <div class="text-wrap _flex-between">
-                                                <span class="text _left">직관형</span>
-                                                <span class="text _right _orange">현실주의형</span>
-                                            </div>
-                                        </div>
-                                        <div class="caption _self">
-                                            <p>본성</p>
-                                            <div class="bar _flex-between">
-                                                <span class="per _left">47%</span>
-                                                <div class="center-bar"><span class="bar _green"></span></div>
-                                                <span class="per _right _green">53%</span>
-                                            </div>
-                                            <div class="text-wrap _flex-between">
-                                                <span class="text _left">이성적사고형</span>
-                                                <span class="text _right _green">원칙주의형</span>
-                                            </div>
-                                        </div>
-                                        <div class="caption _tactics">
-                                            <p>전술</p>
-                                            <div class="bar _flex-between">
-                                                <span class="per _left _purple">54%</span>
-                                                <div class="center-bar"><span class="bar _purple"></span></div>
-                                                <span class="per _right">46%</span>
-                                            </div>
-                                            <div class="text-wrap _flex-between">
-                                                <span class="text _left _purple">계획형</span>
-                                                <span class="text _right">탐색형</span>
-                                            </div>
-                                        </div>
-                                        <div class="caption _identity">
-                                            <p>자아</p>
-                                            <div class="bar _flex-between">
-                                                <span class="per _left">43%</span>
-                                                <div class="center-bar"><span class="bar _red"></span></div>
-                                                <span class="per _right _red">57%</span>
-                                            </div>
-                                            <div class="text-wrap _flex-between">
-                                                <span class="text _left">자기주장형</span>
-                                                <span class="text _right _red">신중형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-           </div>
-       </section> 
-       <section class="section _skills" id="skills">
-           <div class="container">
-                <h3 class="title _flex-center"><span>skills</span></h3>
-                <div class="skill-wrap _wrap01">
-                    <h4>Web publishing</h4>
-                    <div class="chart-wrap _flex-between">
-                        <div class="chart _item01">
-                            <div class="doughnut _html">
-                                <svg viewBox="0 0 100 100">
-                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
-                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#DA4433" transform="rotate(-90 50 50)"/>
-                                </svg>
-                                <div class="per-wrap _flex-center _column _al-center">
-                                    <p class="language">HTML 5</p>
-                                    <p class="per" data-per="90">0%</p>
-                                </div>
-                            </div>
-                            <div class="text-wrap">
-                                <p>HTML 시멘틱구조를 따르며 목적에 맞는 태그활용 가능합니다.</p>
-                            </div>
-                        </div>
-                        <div class="chart _item01">
-                            <div class="doughnut _css">
-                                <svg viewBox="0 0 100 100">
-                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
-                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#4380F5" transform="rotate(-90 50 50)"/>
-                                </svg>
-                                <div class="per-wrap _flex-center _column _al-center">
-                                    <p class="language">CSS 3</p>
-                                    <p class="per" data-per="80">0%</p>
-                                </div>
-                            </div>
-                            <div class="text-wrap">
-                                <p>가상선택자, 미디어쿼리, 기본적인 애니메이션 활용 가능합니다.</p>
-                            </div>
-                        </div>
-                        <div class="chart _item01">
-                            <div class="doughnut _js">
-                                <svg viewBox="0 0 100 100">
-                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
-                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#F2B401" transform="rotate(-90 50 50)"/>
-                                </svg>
-                                <div class="per-wrap _flex-center _column _al-center">
-                                    <p class="language">JS</p>
-                                    <p class="per" data-per="60">0%</p>
-                                </div>
-                            </div>
-                            <div class="text-wrap">
-                                <p>JavaScript 문법을 이해하고 메서드 활용 가능합니다.</p>
-                            </div>
-                        </div>
-                        <div class="chart _item01">
-                            <div class="doughnut _jquery">
-                                <svg viewBox="0 0 100 100">
-                                    <circle cx="50" cy="50" r="45"  transform="rotate(-90 50 50)"/>
-                                    <circle class="gauge" cx="50" cy="50" r="45" stroke="#FAA523" transform="rotate(-90 50 50)"/>
-                                </svg>
-                                <div class="per-wrap _flex-center _column _al-center">
-                                    <p class="language">JQurey</p>
-                                    <p class="per" data-per="70">0%</p>
-                                </div>
-                            </div>
-                            <div class="text-wrap">
-                                <p>JQuery 문법 및 코드 작성 가능하며 플러그인 활용 가능합니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-wrap _wrap02">
-                    <h4>I can do</h4>
-                    <ul class="img-wrap _flex-center">
-                        <li><img src="img/vsc.png" alt="비주얼코드"></li>
-                        <li><img src="img/excel.png" alt="엑셀"></li>
-                        <li><img src="img/powerpoint.png" alt="파워포인트"></li>
-                        <li><img src="img/word.png" alt="워드"></li>
-                    </ul>
-                </div>
-           </div>
-       </section> 
-       <section class="section _portfolio" id="portfolio">
-            <div class="container">
-                <h3 class="title _flex-center"><span>portfolio</span></h3>
-                <div class="portfolio-wrap js-portfolio">
-                    <ul class="item-wrap _flex-start">
-                        <li class="item _01">
-                            <img src="img/pf/gsicoop.jpg" alt="강서아이쿱">
-                            <div class="text-wrap ">
-                                <h5><span class="li-num">js</span><span>GSICOOP 강서생협</span></h5>
-                                <p>강서생협 기관 팀프로젝트로 제작한 사이트입니다.</p>
-                                <p>imweb 솔루션 기반으로 만들었습니다.</p>
-                            </div>
-                            <div class="tags-wrap">
-                                <span>#PC</span>
-                                <span>#RWD</span>
-                                <span>#솔루션</span>
-                                <span>#운영중</span>
-                            </div>
-                            <div class="modal _flex-center _al-center">
-                                <button type="button">상세보기</button>
-                            </div>
-                        </li>
-                        <li class="item _02">
-                            <img src="img/pf/kid.jpg" alt="키즈가오">
-                            <div class="text-wrap ">
-                                <h5><span class="li-num">js</span><span>kidgao (포폴용)</span></h5>
-                                <p>디지털소셜임팩트 과정에서 만든 사이트입니다.</p>
-                                <p>html5, css3</p>
-                            </div>
-                            <div class="tags-wrap">
-                                <span>#PC</span>
-                                <span>#RWD</span>
-                                <span>#onepage</span>
-                            </div>
-                            <div class="modal _flex-center _al-center">
-                                <button type="button">상세보기</button>
-                            </div>
-                        </li>
-                        <li class="item _03">
-                            <img src="img/pf/jbcplu.jpg" alt="jbc플러그인">
-                            <div class="text-wrap ">
-                                <h5><span class="li-num">js</span><span>JBC plugin</span></h5>
-                                <p>학원수료 후 독학으로 만들었습니다.</p>
-                                <p>html5, css3, JQuery</p>
-                            </div>
-                            <div class="tags-wrap">
-                                <span>#PC</span>
-                                <span>#Plugin</span>
-                            </div>
-                            <div class="modal _flex-center _al-center">
-                                <button type="button">상세보기</button>
-                            </div>
-                        </li>
-                        <li class="item _04">
-                            <img src="img/pf/port1.jpg" alt="포트폴리오">
-                            <div class="text-wrap ">
-                                <h5><span class="li-num">js</span><span>JBC portfolio</span></h5>
-                                <p>첫 포폴소개 원페이지형 사이트입니다.</p>
-                                <p>html5, css3, JQuery, plugin</p>
-                            </div>
-                            <div class="tags-wrap">
-                                <span>#PC</span>
-                                <span>#RWD</span>
-                                <span>#onepage</span>
-                            </div>
-                            <div class="modal _flex-center _al-center">
-                                <button type="button">상세보기</button>
-                            </div>
-                        </li>
-                        <li class="item _05">
-                            <img src="img/pf/nexon.jpg" alt="넥슨리뉴얼">
-                            <div class="text-wrap ">
-                                <h5><span class="li-num">js</span><span>nexon (포폴용)</span></h5>
-                                <p>멀티페이지형 넥슨 리뉴얼 사이트입니다.</p>
-                                <p>html5, css3, JQuery, plugin</p>
-                            </div>
-                            <div class="tags-wrap">
-                                <span>#PC</span>
-                                <span>#RWD</span>
-                                <span>#renewal</span>
-                                <span>#mutipage</span>
-                            </div>
-                            <div class="modal _flex-center _al-center">
-                                <button type="button">상세보기</button>
-                            </div>
-                        </li>
-                        <li class="item _06">
-                            <img src="img/pf/uhbee.jpg" alt="어비팩토리">
-                            <div class="text-wrap ">
-                                <h5><span class="li-num">js</span><span>UHBEE 팩토리 (포폴용)</span></h5>
-                                <p>연습용 원페이지형 첫제작 사이트입니다.</p>
-                                <p>html5, css3</p>
-                            </div>
-                            <div class="tags-wrap">
-                                <span>#PC</span>
-                                <span>#RWD</span>
-                                <span>#onepage</span>
-                            </div>
-                            <div class="modal _flex-center _al-center">
-                                <button type="button">상세보기</button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-popup-wrap js-portfolio">
-                    <ul class="item-modal-wrap">
-                        <li class="item _01">
-                            <div class="review-wrap">
-                                <div class="tab-wrap">
-                                    <div class="list-wrap _flex-between _al-center">
-                                        <span class="tab">GSICOOP</span>
-                                        <button type="button" class="close">✖</button>
-                                    </div>
-                                    <div class="tab-rel-wrap _flex-between _al-center">
-                                        <p><span> D : / Portfolio / JBC / </span><span class='tab-rel'>GSICOOP</span></p>
-                                        <i class="icon">⋮</i>
-                                    </div>
-                                </div>    
-                                <article>
-                                    <div class="monitor-wrap">
-                                        <div class="monitor">bacground-image</div>
-                                        <div class="mockup _gsicoop">background-image</div>
-                                    </div>
-                                    <div class="text-wrap">
-                                        <h5><span class="li-num">01.</span><span>GSICOOP 강서생협</span></h5>
-                                        <p>서울시에서 주관한 사업 '서울청년 디지털소셜임팩트 일자리사업' 참여하여 기초역량을 기른 후 해당 참여기관과 매칭하여 제작된 팀프로젝트 사이트입니다.</p>
-                                        <p>참여자 5명이서 함께 팀으로 구성하여 기획단계부터 as-is분석하여 to-be 설계 후 프로젝트를 진행하였습니다.</p>
-                                        <p>기존에 있던 사이트 자료를 이전 요구로 인해 imweb 솔루션을 제공하여 디자인과 적합하게 하도록 컨텐츠 일부분은 커스텀 코딩으로 만들었습니다.</p>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>구분</td>
-                                                    <td>팀프로젝트, 멀티페이지, 운영중</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>뷰포트</td>
-                                                    <td>PC, 반응형</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>브라우저</td>
-                                                    <td>chrome43+, Edge10+</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>사용기술</td>
-                                                    <td>css3, jquery, imweb</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <a href="https://gsicoop.imweb.me/" target="_blank">사이트로 보기 ⇀</a>`
-                                    </div>
-                                </article>
-                            </div>
-                        </li>
-                        <li class="item _02">
-                            <div class="review-wrap">
-                                <div class="tab-wrap">
-                                    <div class="list-wrap _flex-between _al-center">
-                                        <span class="tab">KIDGAO</span>
-                                        <button type="button" class="close">✖</button>
-                                    </div>
-                                    <div class="tab-rel-wrap _flex-between _al-center">
-                                        <p><span> D : / Portfolio / JBC / </span><span class='tab-rel'>KIDGAO</span></p>
-                                        <i class="icon">⋮</i>
-                                    </div>
-                                </div>    
-                                <article>
-                                    <div class="monitor-wrap">
-                                        <div class="monitor">bacground-image</div>
-                                        <div class="mockup _kidgao">background-image</div>
-                                    </div>
-                                    <div class="text-wrap">
-                                        <h5><span class="li-num">02.</span><span>kidgao (포폴용)</span></h5>
-                                        <p>서울시에서 주관한 사업 '서울청년 디지털소셜임팩트 일자리사업' 에서 <br> 기초역량을 키우면서 제작된 클론코딩 사이트입니다.</p>
-                                        <p></p>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>구분</td>
-                                                    <td>교육과정, 싱글페이지</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>뷰포트</td>
-                                                    <td>PC, 반응형</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>브라우저</td>
-                                                    <td>chrome43+, Edge10+</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>사용기술</td>
-                                                    <td>html5, css3</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <a href="http://chaos0425.dothome.co.kr/kidsgao_ex/index.html" target="_blank">사이트로 보기 ⇀</a>`
-                                    </div>
-                                </article>
-                            </div>
-                        </li>
-                        <li class="item _03">
-                            <div class="review-wrap">
-                                <div class="tab-wrap">
-                                    <div class="list-wrap _flex-between _al-center">
-                                        <span class="tab">JBC plugin</span>
-                                        <button type="button" class="close">✖</button>
-                                    </div>
-                                    <div class="tab-rel-wrap _flex-between _al-center">
-                                        <p><span> D : / Portfolio / JBC / </span><span class='tab-rel'>JBC_plugin</span></p>
-                                        <i class="icon">⋮</i>
-                                    </div>
-                                </div>    
-                                <article>
-                                    <div class="monitor-wrap">
-                                        <div class="monitor">bacground-image</div>
-                                        <div class="mockup _plugin">background-image</div>
-                                    </div>
-                                    <div class="text-wrap">
-                                        <h5><span class="li-num">03.</span><span>JBC plugin</span></h5>
-                                        <p>JBC_ani plugin 소개 사이트입니다.</p>
-                                        <p>포트폴리오에서 만들었던 애니메이션jquery 코드를 플러그인으로 만들어보고 싶어서 따로 공부하면서 만들었습니다.</p>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>구분</td>
-                                                    <td>플러그인, 소개페이지</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>뷰포트</td>
-                                                    <td>PC</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>브라우저</td>
-                                                    <td>chrome43+, Edge10+</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>사용기술</td>
-                                                    <td>html5, css3, jquery</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <a href="https://star1431.github.io/jbc_ani_plugin/" target="_blank">사이트로 보기 ⇀</a>`
-                                    </div>
-                                </article>
-                            </div>
-                        </li>
-                        <li class="item _04">
-                            <div class="review-wrap">
-                                <div class="tab-wrap">
-                                    <div class="list-wrap _flex-between _al-center">
-                                        <span class="tab">JBC portfolio</span>
-                                        <button type="button" class="close">✖</button>
-                                    </div>
-                                    <div class="tab-rel-wrap _flex-between _al-center">
-                                        <p><span> D : / Portfolio / JBC / </span><span class='tab-rel'>JBC portfolio</span></p>
-                                        <i class="icon">⋮</i>
-                                    </div>
-                                </div>    
-                                <article>
-                                    <div class="monitor-wrap">
-                                        <div class="monitor">bacground-image</div>
-                                        <div class="mockup _jbcportfolio">background-image</div>
-                                    </div>
-                                    <div class="text-wrap">
-                                        <h5><span class="li-num">04.</span><span>JBC portfolio</span></h5>
-                                        <p>학원수료 후 만든 포트폴리오 소개 사이트입니다.</p>
-                                        <p>디자인까지 순수작업하였으며 동적인효과를 많이 삽입하였습니다.</p>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>구분</td>
-                                                    <td>포트폴리오, 싱글페이지</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>뷰포트</td>
-                                                    <td>PC,RWD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>브라우저</td>
-                                                    <td>chrome43+, Edge10+</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>사용기술</td>
-                                                    <td>html5, css3, jquery, plugin</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <a href="http://chaos0425.dothome.co.kr/pfs/jbc.html" target="_blank">사이트로 보기 ⇀</a>`
-                                    </div>
-                                </article>
-                            </div>
-                        </li>
-                        <li class="item _05">
-                            <div class="review-wrap">
-                                <div class="tab-wrap">
-                                    <div class="list-wrap _flex-between _al-center">
-                                        <span class="tab">nexon</span>
-                                        <button type="button" class="close">✖</button>
-                                    </div>
-                                    <div class="tab-rel-wrap _flex-between _al-center">
-                                        <p><span> D : / Portfolio / JBC / </span><span class='tab-rel'>nexon</span></p>
-                                        <i class="icon">⋮</i>
-                                    </div>
-                                </div>    
-                                <article>
-                                    <div class="monitor-wrap">
-                                        <div class="monitor">bacground-image</div>
-                                        <div class="mockup _nexon">background-image</div>
-                                    </div>
-                                    <div class="text-wrap">
-                                        <h5><span class="li-num">05.</span><span>nexon (포폴용)</span></h5>
-                                        <p>포트폴리오용으로 만든 넥슨 리뉴얼 사이트입니다.</p>
-                                        <p>기존에 있던 사이트에서 as-is분석 후 저만의 to-be설계하여 기획부터 디자인까지 작업 후 멀티페이지형식으로 하드코딩 작업을 했습니다.</p>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>구분</td>
-                                                    <td>포트폴리오, 멀티페이지</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>뷰포트</td>
-                                                    <td>PC,RWD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>브라우저</td>
-                                                    <td>chrome43+, Edge10+</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>사용기술</td>
-                                                    <td>html5, css3, jquery, plugin</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <a href="http://chaos0425.dothome.co.kr/web_pf/main.html" target="_blank">사이트로 보기 ⇀</a>`
-                                    </div>
-                                </article>
-                            </div>
-                        </li>
-                        <li class="item _06">
-                            <div class="review-wrap">
-                                <div class="tab-wrap">
-                                    <div class="list-wrap _flex-between _al-center">
-                                        <span class="tab">UHBEE</span>
-                                        <button type="button" class="close">✖</button>
-                                    </div>
-                                    <div class="tab-rel-wrap _flex-between _al-center">
-                                        <p><span> D : / Portfolio / JBC / </span><span class='tab-rel'>UHBEE</span></p>
-                                        <i class="icon">⋮</i>
-                                    </div>
-                                </div>    
-                                <article>
-                                    <div class="monitor-wrap">
-                                        <div class="monitor">bacground-image</div>
-                                        <div class="mockup _uhbee">background-image</div>
-                                    </div>
-                                    <div class="text-wrap">
-                                        <h5><span class="li-num">06.</span><span>UHBEE 팩토리 (포폴용)</span></h5>
-                                        <p>학원에서 RWD와 레이아웃배열 연습하기 위해 만든 UHBEE 가상사이트 입니다.</p>
-                                        <p>디자인 최종시안을 보고 순수 하드코딩으로 만들었습니다.</p>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>구분</td>
-                                                    <td>포트폴리오, 싱글페이지</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>뷰포트</td>
-                                                    <td>PC,RWD</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>브라우저</td>
-                                                    <td>chrome43+, Edge10+</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>사용기술</td>
-                                                    <td>html5, css3</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <a href="http://chaos0425.dothome.co.kr/rwdub/r_ub.html" target="_blank">사이트로 보기 ⇀</a>`
-                                    </div>
-                                </article>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="close-bg _bg-color"></div>    
                 </div>
             </div>
-
-       </section> 
-       <section class="section _connect" id="connect">
-            <div class="container">
-                <h3 class="title _flex-center"><span>connect</span></h3>
-                <div class="connect-wrap">
-                    <h4 class="sub-title">
-                        끝까지 저의 사이트 봐주셔서 감사합니다.<br>
-                        계속해서 노력하는 웹퍼블리셔가 되겠습니다.
-                    </h4>
-                    <div class="_flex-center">
-                        <div class="left-side">
-                            <div class="img-box">
-                                <img src="img/qrcode.png" alt="qrcode">
-                            </div>
-                            <p>카카오톡 친구 QR코드</p>
+        </section>
+        <section class="list-section list-section01">
+            <div class="w1600">
+                <h3 class="list-tit">추천 상품</h3>
+                <div class="list-product">
+                    <ul class="card-group">
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/COD_Vanguard_Standard_Edition.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/VanguardGold.svg" alt="">
+                                        <span>콜 오브 듀티®: 뱅가드</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 뱅가드
+                                    </h5>
+                                    <p class="detail-text">4월 14일까지 제한된 시간 동안 무료로 플레이하십시오</p>
+                                    <span class="tag">액션 슈터</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦72,000</span>
+                                </div>
+                            </a>
+                        </li> <!--콜옵 뱅가드-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/2wow.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/wow.svg" alt="">
+                                        <span>월드 오브 워크래프트</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        월드 오브 워크래프트®: <br> 어둠땅 - 꾸러미
+                                    </h5>
+                                    <p class="detail-text">지금 바로 어둠땅으로 들어가세요! </p>
+                                    <span class="tag">게임 관련 상품</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦69,000 부터</span>
+                                </div>
+                            </a>
+                        </li><!--와우-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/3wow.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/wow.svg" alt="">
+                                        <span>월드 오브 워크래프트</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        월드 오브 워크래프트®: 게임 시간
+                                    </h5>
+                                    <p class="detail-text">어둠땅, 불타는 성전 클래식, WoW 클래식 마스터리 서버를 모두 이용하실 수 있습니다!</p>
+                                    <span class="tag">MMORPG</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦7,040 부터</span>
+                                </div>
+                            </a>
+                        </li> <!--와우 시간-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/dia2.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/diablo-ii.svg" alt="">
+                                        <span>디아블로® II: 레저렉션</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        디아블로® II: 레저렉션
+                                    </h5>
+                                    <p class="detail-text">지금 바로 플레이하세요!</p>
+                                    <span class="tag">액션 RPG</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦48,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--디아2-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/callblack.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/blackops.svg" alt="">
+                                        <span>콜 오브 듀티®: 블랙 옵스 콜드 워</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 블랙 옵스 콜드 워
+                                    </h5>
+                                    <p class="detail-text">대립과 갈등 무기 팩 지급!</p>
+                                    <span class="tag">액션 슈터</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦49,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--콜옵 블랙-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/stone.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/hearthstone.svg" alt="">
+                                        <span>하스스톤</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        하스스톤™
+                                    </h5>
+                                    <span class="tag">전략 카드 게임</span>
+                                </div>
+                                <div class="price">
+                                    <span>무료로 플레이하기 </span>
+                                </div>
+                            </a>
+                        </li> <!--하스스톤-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/star2.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/starcraft-ii.svg" alt="">
+                                        <span>스타크래프트 II</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        스타크래프트® II: 캠페인 컬렉션 (통합본) 디지털 디럭스
+                                    </h5>
+                                    <span class="tag">실시간 전략</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦56,000</span>
+                                </div>
+                            </a>
+                        </li> <!--스타2-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/over.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/overwatch.svg" alt="">
+                                        <span>오버워치</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        오버워치™
+                                    </h5>
+                                    <span class="tag">팀 기반 액션 게임</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦22,500 </span>
+                                </div>
+                            </a>
+                        </li> <!--오버워치-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/dia3_pack.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/diablo-iii.svg" alt="">
+                                        <span>디아블로 III</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        디아블로® III: 이터널 컬렉션
+                                    </h5>
+                                    <span class="tag">액션 RPG</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦45,000  </span>
+                                </div>
+                            </a>
+                        </li> <!--디아3 컬렉션-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/hero.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/heroes-of-the-storm.svg" alt="">
+                                        <span>히어로즈 오브 더 스톰</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        히어로즈 오브 더 스톰
+                                    </h5>
+                                    <span class="tag">MOBA</span>
+                                </div>
+                                <div class="price">
+                                    <span>무료로 플레이하기</span>
+                                </div>
+                            </a>
+                        </li> <!--히오스-->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="list-section list-section02">
+            <div class="w1600">
+                <h3 class="list-tit">블리자드 추천 상품</h3>
+                <div class="list-product">
+                    <ul class="card-group">
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/vang2.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/VanguardGold.svg" alt="">
+                                        <span>콜 오브 듀티®: 뱅가드</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 뱅가드 - 얼티밋 에디션
+                                    </h5>
+                                    <p class="detail-text">4월 14일까지 제한된 시간 동안 무료로 플레이하십시오</p>
+                                    <span class="tag">액션 슈터</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦124,000</span>
+                                </div>
+                            </a>
+                        </li> <!--콜옵 뱅가드-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/hs_card_pack1.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/hearthstone.svg" alt="">
+                                        <span>하스스톤</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        가라앉은 도시로의 항해 대형 묶음 상품 (예약 구매)
+                                    </h5>
+                                    <p class="detail-text">2022년 4월 12일까지 구매 가능</p>
+                                    <span class="tag">카드팩</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦80,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--하스스톤pack-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/hs_card_pack2.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/hearthstone.svg" alt="">
+                                        <span>하스스톤</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        가라앉은 도시로의 항해 묶음 상품 (예약 구매)
+                                    </h5>
+                                    <p class="detail-text">2022년 4월 12일까지 구매 가능</p>
+                                    <span class="tag">카드팩</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦50,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--하스스톤pack2-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/wow_free.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/wow.svg" alt="">
+                                        <span>월드 오브 워크래프트</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        월드 오브 워크래프트®: 무료 체험
+                                    </h5>
+                                    <p class="detail-text">20 레벨까지 무료로 플레이하세요! </p>
+                                    <span class="tag">게임 관련 상품</span>
+                                </div>
+                                <div class="price">
+                                    <span>무료로 플레이하기</span>
+                                </div>
+                            </a>
+                        </li><!--와우free-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/2wow.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/wow.svg" alt="">
+                                        <span>월드 오브 워크래프트</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        월드 오브 워크래프트®: <br> 어둠땅 - 꾸러미
+                                    </h5>
+                                    <p class="detail-text">지금 바로 어둠땅으로 들어가세요! </p>
+                                    <span class="tag">게임 관련 상품</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦69,000 부터</span>
+                                </div>
+                            </a>
+                        </li><!--와우-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/warzone.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/warzone.svg" alt="">
+                                        <span>콜 오브 듀티®: 워존</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 워존
+                                    </h5>
+                                    <p class="detail-text">누구나 무료로 플레이 </p>
+                                    <span class="tag">액션 슈터</span>
+                                </div>
+                                <div class="price">
+                                    <span>무료로 플레이하기</span>
+                                </div>
+                            </a>
+                        </li><!--워존-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/warzone_point.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/warzone.svg" alt="">
+                                        <span>콜 오브 듀티®: 워존</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 워존 포인트(CP)
+                                    </h5>
+                                    <p class="detail-text">CP로 배틀 패스 획득하세요!</p>
+                                    <span class="tag">게임 내 콘텐츠</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦2,500 부터</span>
+                                </div>
+                            </a>
+                        </li><!--워존 포인트-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/dia2_big.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/diablo-ii.svg" alt="">
+                                        <span>디아블로 II: 레저렉션</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        디아블로® 대악마 컬렉션
+                                    </h5>
+                                    <p class="detail-text">지금 바로 플레이하세요!</p>
+                                    <span class="tag">액션 RPG</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦72,000</span>
+                                </div>
+                            </a>
+                        </li> <!--디아2 대악마-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/over_e.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/overwatch.svg" alt="">
+                                        <span>오버워치</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        오버워치™: 레전더리 에디션
+                                    </h5>
+                                    <span class="tag">팀 기반 액션 게임</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦45,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--오버워치 에디션-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/wow_c.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/wow_c.svg" alt="">
+                                        <span>월드 오브 워크래프트 클래식</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        WoW: 불타는 성전® 클래식 다크 포털 패스
+                                    </h5>
+                                    <p class="detail-text">불타는 성전 클래식은 WoW 게임 시간에 포함되어 있습니다. 근사한 업그레이드를 통해 여정의 품격을 한 단계 끌어올려 보세요! </p>
+                                    <span class="tag">게임 업그레이드</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦48,000 </span>
+                                </div>
+                            </a>
+                        </li><!--와우클래식-->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="list-section list-section03">
+            <div class="w1600">
+                <h3 class="list-tit">실시간 인기 상품</h3>
+                <div class="list-product">
+                    <ul class="card-group">
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/battle.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/battle.svg" alt="">
+                                        <span>계정 서비스</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        배틀코인
+                                    </h5>
+                                    <span class="tag">게임 서비스</span>
+                                </div>
+                                <div class="price">
+                                    <span>자세히 보기</span>
+                                </div>
+                            </a>
+                        </li> <!--배틀코인-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/3wow.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/wow.svg" alt="">
+                                        <span>월드 오브 워크래프트</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        월드 오브 워크래프트®: 게임 시간
+                                    </h5>
+                                    <p class="detail-text">어둠땅, 불타는 성전 클래식, WoW 클래식 마스터리 서버를 모두 이용하실 수 있습니다!</p>
+                                    <span class="tag">MMORPG</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦7,040 부터</span>
+                                </div>
+                            </a>
+                        </li> <!--와우 시간-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/star_r.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/starcraft-remastered.svg" alt="">
+                                        <span>스타크래프트</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        스타크래프트® 리마스터
+                                    </h5>
+                                    <span class="tag">실시간 전략</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦16,500 </span>
+                                </div>
+                            </a>
+                        </li> <!--스타리마스터-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/hs_card_pack1.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/hearthstone.svg" alt="">
+                                        <span>하스스톤</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        가라앉은 도시로의 항해 대형 묶음 상품 (예약 구매)
+                                    </h5>
+                                    <p class="detail-text">2022년 4월 12일까지 구매 가능</p>
+                                    <span class="tag">카드팩</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦80,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--하스스톤pack-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/over.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/overwatch.svg" alt="">
+                                        <span>오버워치</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        오버워치™
+                                    </h5>
+                                    <span class="tag">팀 기반 액션 게임</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦22,500 </span>
+                                </div>
+                            </a>
+                        </li> <!--오버워치-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/battletag.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/battle.svg" alt="">
+                                        <span>계정 서비스</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        BattleTag 변경권
+                                    </h5>
+                                    <span class="tag">게임 서비스</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦10,000</span>
+                                </div>
+                            </a>
+                        </li> <!--배틀태그-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/dia2.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/diablo-ii.svg" alt="">
+                                        <span>디아블로® II: 레저렉션</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        디아블로® II: 레저렉션
+                                    </h5>
+                                    <p class="detail-text">지금 바로 플레이하세요!</p>
+                                    <span class="tag">액션 RPG</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦48,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--디아2-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/over_box.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/overwatch.svg" alt="">
+                                        <span>오버워치</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        오버워치™ 감사제 리믹스 전리품 상자
+                                    </h5>
+                                    <p class="detail-text">2022년 4월 26일까지 구매 가능</p>
+                                    <span class="tag">게임 내 콘텐츠</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦22,500 </span>
+                                </div>
+                            </a>
+                        </li> <!--오버워치 상자-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/star_c.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/starcraft-ii.svg" alt="">
+                                        <span>스타크래프트 II</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        사령관: 데하카
+                                    </h5>
+                                    <span class="tag">사령관</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦4,500</span>
+                                </div>
+                            </a>
+                        </li> <!--스타2 사령관-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/over_league.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/overwatch.svg" alt="">
+                                        <span>오버워치</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        오버워치™ 리그 토큰
+                                    </h5>
+                                    <span class="tag">게임 내 콘텐츠</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦6,000 부터</span>
+                                </div>
+                            </a>
+                        </li> <!--오버워치 리그-->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="list-section list-section04">
+            <div class="w1600">
+                <h3 class="list-tit"> 가장 선물 많이 한 상품</h3>
+                <div class="list-product">
+                    <ul class="card-group">
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/over.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/overwatch.svg" alt="">
+                                        <span>오버워치</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        오버워치™
+                                    </h5>
+                                    <span class="tag">팀 기반 액션 게임</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦22,500 </span>
+                                </div>
+                            </a>
+                        </li> <!--오버워치-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/over_league.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/overwatch.svg" alt="">
+                                        <span>오버워치</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        오버워치™ 리그 토큰
+                                    </h5>
+                                    <span class="tag">게임 내 콘텐츠</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦6,000 부터</span>
+                                </div>
+                            </a>
+                        </li> <!--오버워치 리그-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/battle.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/battle.svg" alt="">
+                                        <span>계정 서비스</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        배틀코인
+                                    </h5>
+                                    <span class="tag">게임 서비스</span>
+                                </div>
+                                <div class="price">
+                                    <span>자세히 보기</span>
+                                </div>
+                            </a>
+                        </li> <!--배틀코인-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/star_r.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/starcraft-remastered.svg" alt="">
+                                        <span>스타크래프트</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        스타크래프트® 리마스터
+                                    </h5>
+                                    <span class="tag">실시간 전략</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦16,500 </span>
+                                </div>
+                            </a>
+                        </li> <!--스타리마스터-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/warzone_point.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/warzone.svg" alt="">
+                                        <span>콜 오브 듀티®: 워존</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 워존 포인트(CP)
+                                    </h5>
+                                    <p class="detail-text">CP로 배틀 패스 획득하세요!</p>
+                                    <span class="tag">게임 내 콘텐츠</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦2,500 부터</span>
+                                </div>
+                            </a>
+                        </li><!--워존 포인트-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/COD_Vanguard_Standard_Edition.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/VanguardGold.svg" alt="">
+                                        <span>콜 오브 듀티®: 뱅가드</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 뱅가드
+                                    </h5>
+                                    <p class="detail-text">4월 14일까지 제한된 시간 동안 무료로 플레이하십시오</p>
+                                    <span class="tag">액션 슈터</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦72,000</span>
+                                </div>
+                            </a>
+                        </li> <!--콜옵 뱅가드-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/dia2.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/diablo-ii.svg" alt="">
+                                        <span>디아블로® II: 레저렉션</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        디아블로® II: 레저렉션
+                                    </h5>
+                                    <p class="detail-text">지금 바로 플레이하세요!</p>
+                                    <span class="tag">액션 RPG</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦48,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--디아2-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/callblack.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/blackops.svg" alt="">
+                                        <span>콜 오브 듀티®: 블랙 옵스 콜드 워</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        콜 오브 듀티®: 블랙 옵스 콜드 워
+                                    </h5>
+                                    <p class="detail-text">대립과 갈등 무기 팩 지급!</p>
+                                    <span class="tag">액션 슈터</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦49,000 </span>
+                                </div>
+                            </a>
+                        </li> <!--콜옵 블랙-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/wow_c_e.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/wow_c.svg" alt="">
+                                        <span>월드 오브 워크래프트 클래식</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        WoW: 불타는 성전® 클래식 딜럭스 에디션
+                                    </h5>
+                                    <p class="detail-text">불타는 성전 클래식은 WoW 게임 시간에 포함되어 있습니다. 근사한 업그레이드를 통해 여정의 품격을 한 단계 끌어올려 보세요! </p>
+                                    <span class="tag">게임 업그레이드</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦84,000 </span>
+                                </div>
+                            </a>
+                        </li><!--와우클래식에디션-->
+                        <li class="list-card">
+                            <a href="javascript:;" class="card _radius-4">
+                                <div class="card-img">
+                                    <img src="img/list/warc2.webp" alt="">
+                                </div>
+                                <div class="text-box">
+                                    <h6 class="small-tit _flex-start _al-center">
+                                        <img src="img/gameicon/warcraft-iii.svg" alt="">
+                                        <span>워크래프트 III</span>
+                                    </h6>
+                                    <h5 class="card-tit">
+                                        워크래프트® lll: 리포지드
+                                    </h5>
+                                    <span class="tag">실시간 전략</span>
+                                </div>
+                                <div class="price">
+                                    <span>￦36,000 부터 </span>
+                                </div>
+                            </a>
+                        </li><!--워크3 리포-->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="download-app-section">
+            <div class="w1600">
+                <div class="download-container _flex-between">
+                    <div class="app-description">
+                        <h2>Battle.net 앱 다운로드</h2>
+                        <div class="point">
+                            <ul>
+                                <li>
+                                    <i class="icon fa-solid fa-table-cells"></i>
+                                    <span>한 곳에서 모든 게임 관리</span>
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-users"></i>
+                                    <span>친구들과 함께하기</span>
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-gift"></i>
+                                    <span>디지털 게임과 상품을 구매하세요</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="right-side _flex-center _al-center">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>이메일</td>
-                                        <td>star1431@naver.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>카카오톡ID</td>
-                                        <td>star1431</td>
-                                    </tr>
-                                    <tr>
-                                        <td>전화번호</td>
-                                        <td>010-5920-2726</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="links _flex-start">
+                            <a href="javascript:;" class="download-button _radius-4 _flex-center">
+                                <span>PC용 다운로드</span>
+                                <i class="icon fa-brands fa-windows"></i>
+                            </a>
+                            <a href="javascript:;" class="more-button _radius-4 _flex-center">
+                                <span>자세히 보기</span>
+                            </a>
                         </div>
+                        <p class="sup">지원가능 : <a href="javascript:;">모바일 앱</a></p>
+                    </div>
+                    <div class="app-img-box _flex">
+                        <img src="img/phoenix_kokr.webp" alt="">
                     </div>
                 </div>
             </div>
-            <a class="github" href="http://github.com/star1431/jbc_portpolio" target="_blank">github</a>
-       </section>  
+        </section>
     </main>
-    <footer id="footer" class="abc _flex-center _column">
-        <p>이 페이지는 상업용 목적이 아닌 개인 포트폴리용으로 제작되었습니다.</p>
-        <p>사용된 일부 이미지는 미리캔버스 출처임을 밝힙니다.</p>    
-        <p>Copyright © 2021 JBC. All rights reserved.</p>
+    <footer id="footer">
+        <div class="w1600">
+            <div class="lenguage">
+                <button type="button" class="lenguage-toggle _flex _al-center">
+                    <i class="icon globa-icon fa-solid fa-earth-americas"></i>
+                    <span>한국어</span>
+                    <div class="arrow-box _flex">
+                        <i class="icon fa-solid fa-angle-up"></i>
+                        <i class="icon fa-solid fa-angle-down"></i>
+                    </div>
+                </button>
+            </div>
+            <h1 class="footer-logo">
+                <a href="#"><img src="img/footer_logo.jpg" alt="logo"></a>
+            </h1>
+            <ul class="corp corp-links-top _flex-center _al-center">
+                <li>
+                    <a href="javascript:;">인재 채용</a>
+                </li>
+                <li>
+                    <a href="javascript:;">회사 소개</a>
+                </li>
+                <li>
+                    <a href="javascript:;">고객지원</a>
+                </li>
+                <li>
+                    <a href="javascript:;">문의 등록</a>
+                </li>
+                <li>
+                    <a href="javascript:;">보도 자료</a>
+                </li>
+                <li>
+                    <a href="javascript:;">API</a>
+                </li>
+                <li>
+                    <a href="javascript:;">BATTLE>NET PC방</a>
+                </li>
+            </ul>
+            <p class="bnet-text">
+                <span>한 곳에서 모든 게임을 플레이할 수 있는</span>
+                
+                <a href="javascript:;">
+                    <img src="img/gameicon/small_battle_icon.svg" alt="">
+                    Battle.net 앱
+                </a>
+            </p>
+            <div class="trademark">
+                <p>©2022 Blizzard Entertainment, Inc. 모든 권리는 Blizzard Entertainment에 있습니다.</p>
+                <p>여기서 언급된 다른 모든 <a href="javascript:;">상표</a> 는 각 소유권자들의 자산입니다.</p>
+            </div>
+            <ul class="corp corp-links-bottom  _flex-center _al-center">
+                <li>
+                    <a href="javascript:;">개인정보 처리방침</a>
+                </li>
+                <li>
+                    <a href="javascript:;">법률 관련 문서</a>
+                </li>
+                <li>
+                    <a href="javascript:;">이용 약관</a>
+                </li>
+                <li>
+                    <a href="javascript:;">쿠키정보 처리방침</a>
+                </li>
+                <li>
+                    <a href="javascript:;">쿠키 설정</a>
+                </li>
+            </ul>
+            <address class="address">
+                <p>블리자드 엔터테인먼트 유한 회사</p>
+                <p>주소: 0000 0000 00000 000000 00000 000</p>
+                <div class="corp-detail _flex-center">   
+                    <span>대표번호 : 0000-0000</span>
+                    <span>팩스 번호: (02)000-0000</span>
+                    <span>이메일 : <a href="javascript:;">00000@0000.co.kr</a></span>
+                    <span>사업자 등록 번호: 000-00-0000</span>
+                    <span>통신 판매업 신고 번호 : 00-0000</span>
+                    <span><a href="javascript:;">사업자정보확인</a></span>
+                    <span>대표이사: 000 0000, 000</span>
+                    <span>개인정보 보호책임자: 000 대표이사</span>
+                </div>
+            </address>
+        </div>
     </footer>
+    <div class="modal-background _none"></div>
 </body>
 </html>
